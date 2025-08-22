@@ -1,0 +1,22 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+    name: "matches"
+    label: "matches"
+    folder: "matches"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}
+    fields:
+        {label: "Title", name: "title", widget: "string"}
+        {label: "Date", name: "date", widget "datetime"}
+        {label: "Team 1", name: "team1", widget: "string"}
+        {label: "Team 2", name: "team2", widget: "string"}
+        {label: "Team 1 Logo", name: "logo1", widget: "image"}
+        {label: "Team 2 Logo", name: "logo2", widget: "image"}
+        {label: "Prediction", name: "prediction", widfet: "text"}
+        {label: "Result", name: "result", widget: "string"}
